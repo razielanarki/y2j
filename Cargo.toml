@@ -1,16 +1,24 @@
 [package]
 name = "y2j"
-version = "0.1.0"
-authors = ["Maxime Vidori <maxime.vidori@booking.com>"]
+description = "tiny utility that pipes YAML from stdin to JSON on stdout"
+keywords = ["yaml", "json", "cli", "convert", "pipe"]
+categories = ["command-line-interface", "command-line-utilities", "data-structures", "encoding", "compilers"]
+version = "0.1.7"
+repository = "https://github.com/razielanarki/y2s/"
+authors = [
+    "Maxime Vidori <maxime.vidori@booking.com>",
+    "Raziel Anarki <razielanarki@semmi.se>"
+]
+
+[badges]
+maintenance = { status = "as-is" }
 
 [dependencies]
 # The core APIs, including the Serialize and Deserialize traits. Always
-# required when using Serde. The "derive" feature is only required when
-# using #[derive(Serialize, Deserialize)] to make Serde work with structs
-# and enums defined in your crate.
-serde = { version = "1.0", features = ["derive"] }
+# required when using Serde.
+serde = { version = "1.0" }
 
 # Each data format lives in its own crate; the sample code below uses JSON
 # but you may be using a different one.
 serde_json = "1.0"
-serde_yaml = "0.8.9"
+serde_yaml = "0.8"
